@@ -2,14 +2,14 @@
   font-family: 'Josefin Sans';
   font-weight: 300;
   font-style: normal;
-  src: url('/fonts/Josefin-Sans-300/Josefin-Sans-300.eot');
-  src: url('/fonts/Josefin-Sans-300/Josefin-Sans-300.eot?#iefix') format('embedded-opentype'),
+  src: url('/fonts/Josefin-Sans/Josefin-Sans-300.eot');
+  src: url('/fonts/Josefin-Sans/Josefin-Sans-300.eot?#iefix') format('embedded-opentype'),
        local('Josefin Sans Light'),
        local('Josefin-Sans-300'),
-       url('/fonts/Josefin-Sans-300/Josefin-Sans-300.woff2') format('woff2'),
-       url('/fonts/Josefin-Sans-300/Josefin-Sans-300.woff') format('woff'),
-       url('/fonts/Josefin-Sans-300/Josefin-Sans-300.ttf') format('truetype'),
-       url('/fonts/Josefin-Sans-300/Josefin-Sans-300.svg#JosefinSans') format('svg');
+       url('/fonts/Josefin-Sans/Josefin-Sans-300.woff2') format('woff2'),
+       url('/fonts/Josefin-Sans/Josefin-Sans-300.woff') format('woff'),
+       url('/fonts/Josefin-Sans/Josefin-Sans-300.ttf') format('truetype'),
+       url('/fonts/Josefin-Sans/Josefin-Sans-300.svg#JosefinSans') format('svg');
 }
 
 /* bootstrap - empty href angular issue - adding styles for tpls */
