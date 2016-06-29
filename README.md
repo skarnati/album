@@ -1,0 +1,1 @@
+Collaborate with your loved ones to preserve those wonderful memories. Build albums using this app, while the photos are hosted on flickr.
