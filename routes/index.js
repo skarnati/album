@@ -2,7 +2,7 @@ var express = require('express');
 var passport = require('passport');
 var Account = require('../models/account');
 var LikedPhotos = require('../models/likedPhotos');
-var AlbumRights = require('../models/AlbumRights');
+var AlbumRights = require('../models/albumRights');
 var router = express.Router();
 var https = require('https');
 //middleware
