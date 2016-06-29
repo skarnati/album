@@ -1,0 +1,17 @@
+<div class="col-md-4">
+  <h1>Register</h1>
+  <div ng-show="rc.error" class="alert alert-danger">{{rc.errorMessage}}</div>
+  <form class="form" ng-submit="rc.register()">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" name="username" ng-model="rc.registerForm.username" required>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" name="password" ng-model="rc.registerForm.password" required>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-default">Register</button>
+    </div>
+  </form>
+</div>

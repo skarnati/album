@@ -1,0 +1,6 @@
+.env
+Makefile
+node_modules
+public/libs
+.vscode
+bower_components

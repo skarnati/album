@@ -1,0 +1,21 @@
+<div data-ng-include="'/partials/topbar.html'" class="topbar-wrapper">
+</div>
+<uib-carousel carousel-controls active="pc.active" interval="myInterval" class="photos-carousel">
+  <uib-slide ng-repeat="slide in pc.slides track by $index" index="$index">
+    <img ng-src="http://farm{{slide.farm}}.staticflickr.com/{{slide.server}}/{{slide.id}}_{{slide.secret}}_b.jpg" style="margin:auto;">
+    <div class="carousel-caption">
+      <a href="" ng-click="pc.toggleLike(slide.id, $index)"><span data-ng-class="slide.likes.length >0 ? 'glyphicon glyphicon-heart': 'glyphicon glyphicon-heart-empty'"></span></a>
+      <div>
+
+        &nbsp;<span ng-repeat="user in slide.likes">
+          <span data-ng-if="$first" class="user"> liked by </span> {{user | isSameUser}}<span data-ng-if="!$last">, </span>
+        </span>
+      </div>
+      <div class="album-name">{{pc.albumTitle}}</div>
+      <div class="slide-count"><span>{{$index + 1 }}</span> of <span>{{pc.slides.length}}</span></div>
+    </div>
+  </uib-slide>
+</uib-carousel>
+<a class="slidenav prev" data-ng-click="goPrev()"><span class="glyphicon glyphicon-menu-left"></span></a>
+<a class="slidenav next" data-ng-click="goNext()"><span class="glyphicon glyphicon-menu-right"></span></a>
+<p class="info-message" data-ng-class="{'hidden':pc.slides.length!=0}">No liked photos</p>

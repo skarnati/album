@@ -1,0 +1,32 @@
+<div class="topbar" data-ng-controller="topbarController as tc">
+    <h3><a href="#/albums">Album Builder</a></h3>
+    <ul>
+        <li uib-dropdown class="arrow" data-ng-if="tc.showFilter">
+            <a href uib-dropdown-toggle data-ng-cloak>
+                {{tc.filter}}
+            </a>
+            <ul class="dropdown-menu" uib-dropdown-menu>
+                <li>
+                    <a href="javascript:void(0)" data-ng-click="tc.changeView('all')">Show all</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" data-ng-click="tc.changeView('byme')">Liked by me</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" data-ng-click="tc.changeView('byany')">Liked by anyone</a>
+                </li>
+            </ul>
+
+        </li>
+        <li uib-dropdown class="arrow">
+            <a href uib-dropdown-toggle ng-cloak>
+                {{tc.user}}
+            </a>
+            <ul class="dropdown-menu" uib-dropdown-menu>
+                <li>
+                    <a href="javascript:void(0)" data-ng-click="tc.logout()">logout</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

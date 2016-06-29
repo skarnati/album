@@ -1,0 +1,8 @@
+<div data-ng-include="'/partials/topbar.html'"></div>
+<h4 class="page__desc">Click on a photoset to filter photos</h4>
+<div data-ng-repeat="album in ac.albums" class="photoset col-lg-4 col-md-6 col-sm-6 col-xs-12">
+    <a href="#/albums/{{album.id}}/all/1">
+        <img ng-src="http://farm{{album.farm}}.staticflickr.com/{{album.server}}/{{album.primary}}_{{album.secret}}.jpg">
+        <span>{{album.title._content}}</span>
+    </a>
+</div>

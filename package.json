@@ -1,0 +1,31 @@
+{
+  "name": "album-builder",
+  "version": "1.0.0",
+  "description": "Build albums in collaboration",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test",
+    "start": "node ./bin/www"
+  },
+  "author": "suraj karnati",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "*",
+    "chai": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-session": "*",
+    "jade": "*",
+    "mocha": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "passport-local-mongoose": "*",
+    "serve-favicon": "*",
+    "should": "*"
+  }
+}
