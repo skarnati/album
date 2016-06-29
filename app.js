@@ -40,7 +40,7 @@ passport.deserializeUser( (sessionUser, done) => {
 })
 
 // mongoose
-mongoose.connect(process.env.MONGODB_URL);
+mongoose.connect(process.env.MONGODB_URI);
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, './public', 'index.html'));
