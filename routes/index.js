@@ -63,10 +63,10 @@ router.get('/logout', function (req, res) {
 
 
 router.get('/albums', loggedIn, function (req, res) {
-    AlbumRights.find({ 'userId': req.user.username }, function (err, model) {
-        if (err) throw err;
+ //   AlbumRights.find({ 'userId': req.user.username }, function (err, model) {
+   //     if (err) throw err;
 
-        if (model.length) {
+     //   if (model.length) {
             var url = "https://api.flickr.com/services/rest?api_key=" + process.env.API_KEY + "&format=json&method=flickr.photosets.getList&nojsoncallback=1&oauth_consumer_key=" + process.env.OAUTH_CONSUMER_KEY + "&oauth_nonce=" + process.env.OAUTH_NONCE + "&oauth_signature_method=HMAC-SHA1&oauth_timestamp=" + process.env.OAUTH_TIMESTAMP + "&oauth_token=" + process.env.OAUTH_TOKEN + "&oauth_version=1.0&user_id=" + process.env.USER_ID + "&oauth_signature=" + process.env.OAUTH_SIGNATURE;
 
             https.get(url, function (result) {
@@ -85,13 +85,11 @@ router.get('/albums', loggedIn, function (req, res) {
             }).on('error', function (err) {
                 console.log("Error getting albums from flickr: ", err);
             });
-        }
-        else {
-            res.json(model);
-        }
-    });
-
-
+        // }
+        // else {
+        //     res.json(model);
+        // }
+  //  });
 });
 
 router.get('/albums/:albumId', loggedIn, function (req, res) {
