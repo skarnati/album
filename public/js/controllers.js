@@ -138,15 +138,15 @@ controllers.topbarController = ['$cookies', 'AuthService', '$state', '$statePara
     }
 }];
 
-controllers.loginController = ['AuthService', '$state',
-    function (AuthService, $state) {
+controllers.loginController = ['AuthService', '$state', '$filter',
+    function (AuthService, $state, $filter) {
         var lc = this;
         lc.login = function () {
             // initial values
             lc.error = false;
 
             // call login from service
-            AuthService.login(lc.loginForm.username, lc.loginForm.password)
+            AuthService.login($filter('lowercase')(lc.loginForm.username), lc.loginForm.password)
                 // handle success
                 .then(function (data) {
                     $state.go('albums');

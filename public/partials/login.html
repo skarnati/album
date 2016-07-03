@@ -6,8 +6,8 @@
     <form class="form-signin" ng-submit="lc.login()">
       <h2 class="form-signin-heading">Please sign in</h2>
       <div ng-show="lc.error" class="alert alert-danger">{{lc.errorMessage}}</div>
-      <label for="inputEmail" class="sr-only">Username</label>
-      <input type="text" id="inputEmail" class="form-control" placeholder="Email address" ng-model="lc.loginForm.username" required
+      <label for="username" class="sr-only">Username</label>
+      <input type="text" id="username" class="form-control" placeholder="Username" ng-model="lc.loginForm.username" required
         autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="lc.loginForm.password" required>
