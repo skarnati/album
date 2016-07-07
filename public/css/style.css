@@ -169,6 +169,8 @@ img{
 .photoset {
     text-align: center;
     padding: 10px;
+    float: none;
+    display: inline-block;
 }
 
 .photoset img {
